@@ -5,17 +5,20 @@ public class UniqueIDsImplementation implements UniqueIDsInterface {
 		this.var = new java.util.UUID(mostSigBits, leastSigBits);
 	}
 
+	protected UniqueIDsImplementation(java.util.UUID var) {
+		this.var = var;
+	}
+
 	private java.util.UUID var;
 
 	@Override
 	public int clockSequence() {
+
 		return var.clockSequence();
 	}
 
 	@Override
-	public String fromString() {
-		// TODO Auto-generated method stub
-		return null;
+	public String toString() {
+		return var.toString();
 	}
-
 }
