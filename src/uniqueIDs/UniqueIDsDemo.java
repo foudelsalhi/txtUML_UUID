@@ -5,7 +5,7 @@ import java.util.UUID;
 public class UniqueIDsDemo {
 	public static void main(String[] args) {
 
-		UniqueIDsImplementation unique = new UniqueIDsImplementation();
+		UniqueIDsInterface unique = new UniqueIDsImplementation(123456789L,123456789L);
 		System.out.println("Clock sequence value: "+ unique.clockSequence());  
 	}
 }
