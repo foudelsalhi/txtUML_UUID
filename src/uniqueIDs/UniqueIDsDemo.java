@@ -47,7 +47,19 @@ public class UniqueIDsDemo {
 		UniqueIDsImplementation uuid11 = new UniqueIDsImplementation(uuid4);
 		System.out.println("Node value is: " + uuid11.node());
 
-		//randomUUID
-		System.out.println("Random UUID value: " + uuid4.randomUUID());
+		// randomUUID
+		System.out.println("Random UUID value: " + UniqueIDsInterface.randomUUID());
+
+		// timestamp
+		UniqueIDsImplementation uuid13 = new UniqueIDsImplementation(uuid4);
+		System.out.println("Time stamp value: " + uuid13.timestamp());
+
+		// variant
+		UniqueIDsImplementation uuid14 = new UniqueIDsImplementation(uuid4);
+		System.out.println("Variant value: " + uuid14.variant());
+
+		// version
+		UniqueIDsImplementation uuid15 = new UniqueIDsImplementation(uuid4);
+		System.out.println("Version value: " + uuid15.version());
 	}
 }

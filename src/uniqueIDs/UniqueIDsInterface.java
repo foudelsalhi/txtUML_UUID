@@ -21,16 +21,22 @@ public interface UniqueIDsInterface extends ExternalClass {
 	public long getMostSignificantBits();
 
 	public int hashCode();
-	
-	public static UniqueIDsInterface nameUUIDFromBytes(byte[] name){
+
+	public static UniqueIDsInterface nameUUIDFromBytes(byte[] name) {
 		return new UniqueIDsImplementation(UUID.nameUUIDFromBytes(name));
 	}
-	
+
 	public long node();
-	
-	public static UniqueIDsInterface randomUUID(){
+
+	public static UniqueIDsInterface randomUUID() {
 		return new UniqueIDsImplementation(UUID.randomUUID());
 	}
+
+	public long timestamp();
+
 	public String toString();
 
+	public int variant();
+
+	public int version();
 }
