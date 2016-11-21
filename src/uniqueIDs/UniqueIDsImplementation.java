@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class UniqueIDsImplementation implements UniqueIDsInterface {
 
-	// Store UUID object to use it in all other functions
+	// Store UUID object and then do all other functions with it
 	private java.util.UUID var;
 
 	// instance method that returns val
