@@ -1,9 +1,55 @@
 package uniqueIDs;
 
+import java.util.UUID;
+
 public class UniqueIDsDemo {
 	public static void main(String[] args) {
-		UniqueIDsInterface uuid = UniqueIDsInterface.randomUUID();
 
-		uuid.clockSequence();
+		UUID uuid = UUID.fromString("38400000-8cf0-11bd-b23e-10b96e4ef00d");
+		UniqueIDsInterface u1 = new UniqueIDsImplementation(uuid);
+		
+		// clockSequence
+		System.out.println("Clock sequence value: " + u1.clockSequence());
+		
+		// compareTo
+		System.out.println("Comparing two UUIDs: " + u1.compareTo(uuid));
+		
+		// equals
+		System.out.println("Is two UUIDs equal: " + u1.equals(uuid));
+		
+		// fromString
+		System.out.println("UUID value: " + UniqueIDsInterface.fromString(u1.toString()));
+		
+		// getLeastSignificantBits
+		System.out.println("Least significant bits: " + u1.getLeastSignificantBits());
+		
+		// getMostSignificantBits
+		System.out.println("Most significant bits: " + u1.getMostSignificantBits());
+		
+		// hashCode
+		System.out.println("Hash code value: " + u1.hashCode());
+		
+		// nameUUIDFromBytes
+		byte[] nbyte = {10,20,30};
+		System.out.println("UUID value from byte: " + UniqueIDsInterface.nameUUIDFromBytes(nbyte));
+		
+		// node
+		System.out.println("Node value is: " + u1.node());
+		
+		// randomUUID
+		System.out.println("Random UUID value: " + UniqueIDsInterface.randomUUID());
+		
+		// timestamp
+		System.out.println("Time stamp value: " + u1.timestamp());
+		
+		// toString
+		System.out.println("String value: " + u1.toString());
+		
+		// variant
+		System.out.println("Variant value: " + u1.variant());
+		
+		// version
+		System.out.println("Version value: " + u1.version());
+		
 	}
 }
